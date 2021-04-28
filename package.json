@@ -1,0 +1,36 @@
+{
+  "name": "addingbakcend-to-ecom",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@iconify/iconify": "1.0.7",
+    "auto-import": "0.1.4",
+    "axios": "0.21.1",
+    "bootstrap": "4.6.0",
+    "glamor": "2.20.40",
+    "history": "5.0.0",
+    "react": "17.0.1",
+    "react-bootstrap": "1.5.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "6.0.0-beta.0",
+    "react-scripts": "4.0.0",
+    "react-toastify": "4.5.1"
+  },
+  "devDependencies": {
+    "typescript": "4.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

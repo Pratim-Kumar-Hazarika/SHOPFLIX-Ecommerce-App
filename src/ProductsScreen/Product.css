@@ -1,0 +1,60 @@
+.add-to-chart-btn {
+  background-color: #ff3f6c;
+  border-radius: 0;
+  width: 100%;
+}
+.add-to-chart-btn:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.wish-btn {
+  background: none;
+  border-radius: 0;
+}
+.iconifyicon {
+  font-size: 2rem;
+  color: #ff3f6c;
+}
+.typesof-card-content {
+  box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+}
+.cartIcon {
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 1rem;
+  margin-bottom: -4px;
+}
+@media only screen and (max-width: 600px) {
+  .product-container {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-color: #f9fafb;
+  }
+  .cart {
+    width: 40%;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .product-container {
+    /* border: 5px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    /* margin: auto; */
+    margin-left: 11rem;
+    background-color: #f9fafb;
+  }
+  .cart {
+    margin: 0;
+    padding: 0;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+.discount-text {
+  color: #ff3f6c;
+}

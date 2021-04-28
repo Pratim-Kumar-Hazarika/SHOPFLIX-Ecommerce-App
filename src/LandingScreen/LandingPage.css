@@ -1,0 +1,47 @@
+.banner_div {
+  position: relative;
+  overflow: hidden;
+
+  width: 80%;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+.banner-image {
+  width: 100%;
+}
+.shop-btn {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  display: inline-block;
+}
+ul > li {
+  display: inline-block;
+  margin: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .shop-btn {
+    text-align: center;
+    /* position: asolute; */
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .banner_div {
+    margin-top: 1rem;
+  }
+  .banner-image {
+    margin-top: 1rem;
+  }
+  .banner-image {
+    width: 100%;
+  }
+}

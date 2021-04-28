@@ -1,0 +1,81 @@
+.trollyimage {
+  width: 300px;
+  height: 300px;
+}
+.main_products {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.incBtn {
+  width: auto;
+}
+.place-order-btn {
+  background-color: #ff3f6c;
+  margin-top: 1rem;
+}
+.checkout {
+  background-color: #f3f4f6;
+  overflow: hidden;
+}
+.place-order-prices-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.place-order-prices-div > div {
+  font-size: 15px;
+}
+.total_price {
+  font-weight: 800;
+}
+
+.product_img {
+  width: 100%;
+  max-width: 230px;
+}
+.details_div {
+  width: 50%;
+  margin-left: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .horizontalcard {
+    width: 100%;
+    color: black;
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main_products {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .checkout {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f3f4f6;
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .horizontalcard {
+    padding: 0.5rem;
+    max-width: 100%;
+    color: black;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+    background-color: white;
+  }
+}

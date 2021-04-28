@@ -1,0 +1,148 @@
+.product-detail-card {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 2rem;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+  padding: 0.8rem;
+  background-color: white;
+}
+.product-detail-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .product-detail-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    background-color: white;
+  }
+  .bank_tags {
+    display: flex;
+    margin-top: 1rem;
+  }
+  .bank_offer_text {
+    font-size: 15px;
+    margin-left: 2px;
+  }
+  .product-detail-addtocart {
+    width: 100%;
+  }
+  .name_text {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+  .description {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: #6b7280;
+  }
+  .mrp-slashed {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .available_offer {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .product-detail-card {
+    padding: 1rem;
+  }
+  .product-detail-img {
+    width: 100%;
+  }
+  .image-detail-div {
+    width: 50%;
+    background-color: white;
+  }
+  .product_details_div {
+    width: 50%;
+    overflow: hidden;
+  }
+  .product-detail-addtocart {
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+  .detail_div_product {
+    position: aboslute;
+    margin-left: 1rem;
+  }
+  .bank_offer_text {
+    font-size: 12px;
+    margin-left: 2px;
+  }
+  .bank_tags {
+    display: flex;
+    margin-top: 1rem;
+  }
+  .name_text {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    font-size: 20px;
+  }
+  .description {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: #6b7280;
+  }
+  .available_offer {
+    margin-top: 1rem;
+  }
+  .tt_price {
+    font-size: 25px;
+  }
+  .mrp-slashed {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1362px) {
+  .product-detail-card {
+    padding: 1rem;
+  }
+  .product-detail-img {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .image-detail-div {
+    width: 50%;
+  }
+  .product_details_div {
+    width: 70%;
+    overflow: hidden;
+  }
+  .product-detail-addtocart {
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+  .product-detail-card {
+    padding: 1rem;
+  }
+  .product-detail-img {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .image-detail-div {
+    width: 50%;
+  }
+  .product_details_div {
+    width: 70%;
+    overflow: hidden;
+  }
+  .product-detail-addtocart {
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+}
