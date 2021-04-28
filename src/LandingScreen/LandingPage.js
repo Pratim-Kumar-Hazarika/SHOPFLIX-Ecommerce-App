@@ -5,7 +5,7 @@ export function LandingPage() {
     <div className="banner_div">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <ul>
-          <li>Men</li>
+          <li>Mennn</li>
           <li>Women</li>
           <li>Kids</li>
           <li>Sale</li>
