@@ -4,4 +4,4 @@
 
 #Routing through React Router v6
 
-#Data integrating through Mongoose,MongoDb,Node
+#Data integration through Mongoose,MongoDb,Node
