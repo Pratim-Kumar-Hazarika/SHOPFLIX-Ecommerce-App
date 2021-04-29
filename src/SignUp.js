@@ -13,7 +13,7 @@ export function SignUp() {
             <input type="text" placeholder="Enter Email" />
             <input type="password" placeholder="Enter Password" />
             <button
-              className="add-to-chart-btn "
+              className="add-to-chart-btn signinBtn"
               style={{ fontWeight: "bold" }}
             >
               SIGN UP

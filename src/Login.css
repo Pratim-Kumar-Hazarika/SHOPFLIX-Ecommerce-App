@@ -18,7 +18,7 @@
     border: none;
     border-radius: 5px;
     padding: 5px 15px;
-    width: 90%;
+    width: 89%;
     color: black;
     border: 1px solid #b6b6b6;
   }
@@ -29,4 +29,9 @@
     font-weight: bold;
     color: #ff3f6c;
   }
-  
+  @media only screen and (max-width: 600px){
+.signinBtn{
+  width: 100%;
+  margin-left: 0.1rem;;
+}
+  }

@@ -19,7 +19,7 @@ export function Login() {
               </Link>{" "}
             </div>
             <button
-              className="add-to-chart-btn "
+              className="add-to-chart-btn signinBtn"
               style={{ fontWeight: "bold", marginTop: "1rem" }}
             >
               SIGN IN
