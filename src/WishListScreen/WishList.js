@@ -4,7 +4,7 @@ import { useCart } from "../cartContext";
 import { WISHLIST_API } from "../api.js";
 import "./WishList.css";
 export function WishList() {
-  const { wishList, dispatch } = useCart();
+  const { wishList, dispatch,cart } = useCart();
   // const itemFromWish = wishList.map((item) => item.product);
 
   async function removeFromWishListHandler(item) {
@@ -13,6 +13,63 @@ export function WishList() {
       const res = await axios.delete(`${WISHLIST_API}/${item._id}`);
     } catch (error) {
       console.log("error occured");
+    }
+  }
+
+  function btnText(item) {
+    const { _id } = item;
+    const getItem = cart.find((item) => item._id === _id);
+    if (getItem) {
+      return "ADDED TO CART";
+    } else {
+      return `ADD TO CART`;
+    }
+  }
+
+  function TeenyiconsTickCircleSolid(props) {
+    return (
+      <svg
+        class="iconify cartIcon"
+        width="1em"
+        height="1em"
+        viewBox="0 0 15 15"
+        {...props}
+      >
+        <g fill="none">
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0 7.5a7.5 7.5 0 1 1 15 0a7.5 7.5 0 0 1-15 0zm7.072 3.21l4.318-5.398l-.78-.624l-3.682 4.601L4.32 7.116l-.64.768l3.392 2.827z"
+            fill="currentColor"
+          ></path>
+        </g>
+      </svg>
+    );
+  }
+
+  function MdiCart(props) {
+    return (
+      <svg
+        class="iconify cartIcon"
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
+        {...props}
+      >
+        <path
+          d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25c0-.05.01-.09.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    );
+  }
+  function btnIcon(item) {
+    const { _id } = item;
+    const getItem = cart.find((item) => item._id === _id);
+    if (getItem) {
+      return <TeenyiconsTickCircleSolid />;
+    } else {
+      return <MdiCart />;
     }
   }
   return (
@@ -75,13 +132,8 @@ export function WishList() {
                       dispatch({ type: "ADD_TO_CART", payload: item })
                     }
                     s
-                  >
-                    MOVE TO CART
-                    <span
-                      class="iconify cartIcon"
-                      data-icon="mdi:cart"
-                      data-inline="false"
-                    ></span>
+                  >  {btnText(item)}
+                  {btnIcon(item)}
                   </button>
                   <button
                     className="wish-btn"

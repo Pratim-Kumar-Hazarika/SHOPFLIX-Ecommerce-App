@@ -91,7 +91,7 @@ export function Cart() {
                         >
                           REMOVE FROM CART
                           <span
-                            class="iconify cartIcon"
+                            class="iconify cartIcon removeIcon"
                             data-icon="ic:round-remove-shopping-cart"
                             data-inline="false"
                           ></span>
