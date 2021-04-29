@@ -29,9 +29,8 @@
     font-weight: bold;
     color: #ff3f6c;
   }
-  @media only screen and (max-width: 600px){
-.signinBtn{
-  width: 100%;
-  margin-left: 0.1rem;;
-}
+  @media only screen and (max-width: 400px){
+      .signinBtn{
+        width: 110%;
+      }
   }
