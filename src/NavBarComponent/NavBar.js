@@ -25,6 +25,15 @@ export function NavBar() {
       </div>
 
       <div className="nav_right_icons">
+      <div style={{ marginRight: "1rem" }}>
+          <Link to="/login">
+            <span
+              class="iconify shopflix_icon"
+              data-icon="mdi:account-circle-outline"
+              data-inline="false"
+            ></span>
+          </Link>
+        </div>
         <div className="wish_icon_right">
           <Link to="/wishlist">
             <span

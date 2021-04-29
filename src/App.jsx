@@ -11,6 +11,8 @@ import { NavBar } from "./NavBarComponent/NavBar";
 import { LandingPage, toast } from "./LandingScreen/LandingPage";
 import { ToastContainer } from "react-toastify";
 import { PRODUCTS_API, CART_API, WISHLIST_API } from "./api.js";
+import { Login } from "./Login";
+import { SignUp } from "./SignUp";
 export default function App() {
   const { dispatch, toastId } = useCart();
   useEffect(() => {
@@ -44,6 +46,8 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/wishlist" element={<WishList />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
