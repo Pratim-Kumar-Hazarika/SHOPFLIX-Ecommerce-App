@@ -5,6 +5,10 @@
 #Routing through React Router v6
 
 #Data Integration through Mongoose,MongoDb,Node
+#UPDATE
+1.Added integration for users.
+2.Now you can signup and add orders and it also has persistance.
+
 
 `Landing Page`
 ![image](https://user-images.githubusercontent.com/75177895/116454704-e6b60900-a87d-11eb-9d75-d6cd6fa5f523.png)
