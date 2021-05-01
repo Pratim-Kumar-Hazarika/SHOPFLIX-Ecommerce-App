@@ -56,7 +56,7 @@ export default function App() {
     }
     console.log("signout handler", signOutHandler);
     return getData();
-  }, [signOutHandler, login]);
+  }, [ login]);
 
   return (
     <div className="App">
