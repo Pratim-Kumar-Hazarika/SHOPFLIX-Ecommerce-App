@@ -1,9 +1,11 @@
 import { useCart } from "../cartContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../authContext";
 
 export function NavBar() {
   const { show, setShow, cart, wishList } = useCart();
+  const { login } = useAuth()
   return (
     <div className="nav_div">
       <div className="icon_name">
@@ -42,7 +44,7 @@ export function NavBar() {
               data-inline="false"
             ></span>
             <span className="badge-no">
-              {wishList.length > 0 && wishList.length}
+            {login && wishList.length}
             </span>
           </Link>
         </div>
@@ -55,7 +57,7 @@ export function NavBar() {
                 data-inline="false"
               ></span>
             </Link>
-            <span className="badge-no">{cart.length > 0 && cart.length}</span>
+            <span className="badge-no">{login && cart.length}</span>
           </div>
         </div>
       </div>

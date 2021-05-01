@@ -11,10 +11,13 @@ import { NavBar } from "./NavBarComponent/NavBar";
 import { LandingPage, toast } from "./LandingScreen/LandingPage";
 import { ToastContainer } from "react-toastify";
 import { PRODUCTS_API, CART_API, WISHLIST_API } from "./api.js";
-import { Login } from "./Login";
+import { Login } from "./LoginPage/Login";
 import { SignUp } from "./SignUp";
+import { PrivateRoute } from "./LoginPage/PrivateRoute";
+import { useAuth } from "./authContext";
 export default function App() {
   const { dispatch, toastId } = useCart();
+  const { login, signOutHandler } = useAuth();
   useEffect(() => {
     async function getData() {
       try {
@@ -22,22 +25,34 @@ export default function App() {
           data: { product }
         } = await axios.get(PRODUCTS_API);
         dispatch({ type: "DATA_FROM_SERVER", payload: product });
+        const userId = JSON.parse(localStorage.getItem("user"));
+        console.log("the id is mfaaa", userId[0]._id);
         const {
-          data: { cart }
-        } = await axios.get(CART_API);
+          data: {
+            user: { cart }
+          }
+        } = await axios.get(
+          `https://Ecommerce-Backend-6.prratim.repl.co/users/${userId[0]._id}/cart`
+        );
         const cartItems = cart.map((item) => item.product);
+
         dispatch({ type: "CART_DATA_FROM_SERVER", payload: cartItems });
         const {
-          data: { wishlist }
-        } = await axios.get(WISHLIST_API);
-        const wishItems = wishlist.map((item) => item.product);
-        dispatch({ type: "WISH_DATA_FROM_SERVER", payload: wishItems });
+          data: {
+            user: { wishlist }
+          }
+        } = await axios.get(
+          `https://Ecommerce-Backend-6.prratim.repl.co/users/${userId[0]._id}/wishlist`
+        );
+        console.log("wishhhhhh", wishlist);
+        dispatch({ type: "WISH_DATA_FROM_SERVER", payload: wishlist });
       } catch (error) {
         console.log("Error Found", error);
       }
     }
+    console.log("signout handler", signOutHandler);
     return getData();
-  }, []);
+  }, [signOutHandler, login]);
 
   return (
     <div className="App">
@@ -48,8 +63,8 @@ export default function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/wishlist" element={<WishList />} />
-        <Route path="/cart" element={<Cart />} />
+        <PrivateRoute path="/wishlist" element={<WishList />} />
+        <PrivateRoute path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
       </Routes>
