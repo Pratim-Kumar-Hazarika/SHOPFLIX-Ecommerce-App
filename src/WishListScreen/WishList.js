@@ -7,15 +7,37 @@ export function WishList() {
   const { wishList, dispatch,cart } = useCart();
   // const itemFromWish = wishList.map((item) => item.product);
 
+  const userrrrr = JSON.parse(localStorage.getItem("user"));
   async function removeFromWishListHandler(item) {
     try {
       dispatch({ type: "REMOVE_FROM_WISHLIST", payload: item._id });
-      const res = await axios.delete(`${WISHLIST_API}/${item._id}`);
+      const res = await axios.delete(
+        `https://Ecommerce-Backend.prratim.repl.co/users/${userrrrr[0]._id}/wishlist`,
+        { data: { _id: item._id } }
+      );
+      console.log("deleted from wishlist", res);
     } catch (error) {
       console.log("error occured");
     }
   }
-
+  async function addToCartClickHandler(item) {
+    try {
+     
+        console.log("the item id is", item);
+        dispatch({ type: "ADD_TO_CART", payload: item });
+        const res = await axios.post(
+          `https://Ecommerce-Backend.prratim.repl.co/users/${userrrrr[0]._id}/cart`,
+          {
+            _id: item._id
+          }
+        );
+        console.log("res", res);
+    
+      
+    } catch (error) {
+      console.log("Item already added to cart", error);
+    }
+  }
   function btnText(item) {
     const { _id } = item;
     const getItem = cart.find((item) => item._id === _id);
@@ -128,10 +150,7 @@ export function WishList() {
                   </h3>
                   <button
                     className="add-to-chart-btn move-to-bag-btn"
-                    onClick={() =>
-                      dispatch({ type: "ADD_TO_CART", payload: item })
-                    }
-                    s
+                    onClick={() => addToCartClickHandler(item)}
                   >  {btnText(item)}
                   {btnIcon(item)}
                   </button>

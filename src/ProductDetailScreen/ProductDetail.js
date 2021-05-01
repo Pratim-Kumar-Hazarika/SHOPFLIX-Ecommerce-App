@@ -1,26 +1,36 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useCart } from "../cartContext";
 import { CART_API, WISHLIST_API } from "../api.js";
 import "./ProductDetail.css";
 import axios from "axios";
+import { useAuth } from "../authContext";
+import { ToastContainer } from "react-toastify";
 
 export function ProductDetail() {
-  const { data, dispatch ,cart} = useCart();
+  const { login } = useAuth();
+  const navigate = useNavigate();
+  const { data, dispatch ,cart,toastId} = useCart();
   const { productId } = useParams();
   console.log("id is", productId);
   console.log("data", data);
   const productFound = data.find((item) => item._id === productId);
   console.log({ productFound });
   const { name, image, price, description, offer } = productFound;
-
+  const userrrrr = JSON.parse(localStorage.getItem("user"));
   async function addToCartClickHandler(productFound) {
     try {
-      dispatch({ type: "ADD_TO_CART", payload: productFound });
-      const res = await axios.post(CART_API, {
-        _id: `${productFound._id}`,
-        quantity: 1
-      });
-      console.log(res);
+      if (login) {
+        dispatch({ type: "ADD_TO_CART", payload: productFound });
+        const res = await axios.post(
+          `https://Ecommerce-Backend.prratim.repl.co/users/${userrrrr[0]._id}/cart`,
+          {
+            _id: productFound._id
+          }
+        );
+        console.log("res", res);
+      } else {
+        navigate("/login");
+      }
     } catch (error) {
       console.log("Item already added to cart", error);
     }
@@ -28,11 +38,11 @@ export function ProductDetail() {
   async function addToWishListHandler(productFound) {
     try {
       dispatch({ type: "ADD_TO_WISHLIST", payload: productFound });
-      const res = await axios.post(WISHLIST_API, {
-        _id: `${productFound._id}`,
-        quantity: 1
-      });
-      console.log(res);
+      const res = await axios.post(
+        `https://Ecommerce-Backend.prratim.repl.co/users/${userrrrr[0]._id}/wishlist`,
+        { _id: productFound._id }
+      );
+      console.log("Added to wishlist", res);
     } catch (error) {
       console.log("Item already added to Wishlist", error);
     }
@@ -206,6 +216,8 @@ export function ProductDetail() {
           </div>
         </div>
       </div>
+
+
     </>
   );
 }

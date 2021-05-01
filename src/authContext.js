@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
     try {
       const {
         data: { allUsers }
-      } = await axios.get("https://Ecommerce-Backend-6.prratim.repl.co/users");
+      } = await axios.get("https://Ecommerce-Backend.prratim.repl.co/users");
       const user = allUsers.filter((item) => item.name === username);
       console.log("the user is", user);
 

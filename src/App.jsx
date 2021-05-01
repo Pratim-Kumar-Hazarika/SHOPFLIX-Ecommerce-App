@@ -23,8 +23,12 @@ export default function App() {
       try {
         const {
           data: { product }
-        } = await axios.get(PRODUCTS_API);
+        } = await axios.get(
+          "https://Ecommerce-Backend.prratim.repl.co/product"
+        );
         dispatch({ type: "DATA_FROM_SERVER", payload: product });
+
+        //Get Userss...
         const userId = JSON.parse(localStorage.getItem("user"));
         console.log("the id is mfaaa", userId[0]._id);
         const {
@@ -32,7 +36,7 @@ export default function App() {
             user: { cart }
           }
         } = await axios.get(
-          `https://Ecommerce-Backend-6.prratim.repl.co/users/${userId[0]._id}/cart`
+          `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/cart`
         );
         const cartItems = cart.map((item) => item.product);
 
@@ -42,7 +46,7 @@ export default function App() {
             user: { wishlist }
           }
         } = await axios.get(
-          `https://Ecommerce-Backend-6.prratim.repl.co/users/${userId[0]._id}/wishlist`
+          `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/wishlist`
         );
         console.log("wishhhhhh", wishlist);
         dispatch({ type: "WISH_DATA_FROM_SERVER", payload: wishlist });
@@ -57,8 +61,6 @@ export default function App() {
   return (
     <div className="App">
       <NavBar />
-      {toastId && <ToastContainer newestOnTop={false} autoClose={3000} />}
-
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
@@ -68,6 +70,7 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
       </Routes>
+      {toastId &&<ToastContainer newestOnTop={false} autoClose={3000} limit={1}/>}
     </div>
   );
 }

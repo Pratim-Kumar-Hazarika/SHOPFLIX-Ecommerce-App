@@ -9,7 +9,7 @@ export function SignUp() {
     event.preventDefault();
     try {
       const res = await axios.post(
-        "https://Ecommerce-Backend-6.prratim.repl.co/users",
+        "https://Ecommerce-Backend.prratim.repl.co/users",
         {
           name: inputName,
           password: inputPass,
