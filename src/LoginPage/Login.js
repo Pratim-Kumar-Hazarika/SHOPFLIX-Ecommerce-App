@@ -86,14 +86,14 @@ export function Login() {
                 <div> NAME </div>
 
                 <div className="text_bold" style={{ marginLeft: "1rem" }}>
-                  {userId[0].name.toUpperCase()}
+                  USER
                 </div>
               </div>
               <div className="userContent">
                 <div> Email ID</div>
 
                 <div className="text_bold" style={{ marginLeft: "10px" }}>
-                  {userId[0].email}
+                  User@gmail.com
                 </div>
               </div>
               <div className="userContent">
