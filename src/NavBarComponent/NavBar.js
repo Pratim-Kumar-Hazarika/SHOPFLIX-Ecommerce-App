@@ -28,6 +28,15 @@ export function NavBar() {
 
       <div className="nav_right_icons">
       <div style={{ marginRight: "1rem" }}>
+          <Link to="/products">
+            <span
+              class="iconify shopflix_icon"
+              data-icon="map:clothing-store"
+              data-inline="false"
+            ></span>
+          </Link>
+        </div>
+      <div style={{ marginRight: "1rem" }}>
           <Link to="/login">
             <span
               class="iconify shopflix_icon"
