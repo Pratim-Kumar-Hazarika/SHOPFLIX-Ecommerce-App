@@ -1,9 +1,11 @@
+import axios from "axios";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../authContext";
 import "./Login.css";
 
 export function ProfilePage() {
-  const { login } = useAuth();
+  const { signOutHandler, login } = useAuth();
   const userId = JSON.parse(localStorage.getItem("user"));
   return (
     <>
@@ -11,7 +13,7 @@ export function ProfilePage() {
         <form>
           <div style={{ borderBottom: "1px solid #eaeaec" }}>
             <h1 style={{ fontWeight: "lighter", color: "#282C3F" }}>
-              PROFILE DETAILS
+              PROFILE DETAILSS
             </h1>
           </div>
 
@@ -19,7 +21,7 @@ export function ProfilePage() {
             <div> NAME </div>
 
             <div className="text_bold" style={{ marginLeft: "1rem" }}>
-              {userId === null ? "user" : userId[0].name}
+            {userId === null ? "User" : userId[0].name}
             </div>
           </div>
           <div className="userContent">
@@ -68,11 +70,11 @@ export function ProfilePage() {
             </Link>
           </div>
           <button
-        
+            onClick={signOutHandler}
             className="add-to-chart-btn "
             style={{ fontWeight: "bold", marginTop: "1rem" }}
           >
-            UPDATE
+            SIGN OUT
           </button>
         </form>
       </div>
