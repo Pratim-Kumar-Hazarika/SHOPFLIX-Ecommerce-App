@@ -5,7 +5,7 @@ import { useAuth } from "../authContext";
 import "./Login.css";
 
 export function ProfilePage() {
-  const { signOutHandler, login } = useAuth();
+  const { login } = useAuth();
   const userId = JSON.parse(localStorage.getItem("user"));
   return (
     <>
@@ -70,11 +70,11 @@ export function ProfilePage() {
             </Link>
           </div>
           <button
-            onClick={signOutHandler}
+        
             className="add-to-chart-btn "
             style={{ fontWeight: "bold", marginTop: "1rem" }}
           >
-            SIGN OUT
+            UPDATE
           </button>
         </form>
       </div>
