@@ -21,7 +21,7 @@ export function ProfilePage() {
             <div> NAME </div>
 
             <div className="text_bold" style={{ marginLeft: "1rem" }}>
-            {userId === null ? "User" : userId[0].name}
+            {userId === null ? "User" : userId[0].name.toUpperCase()}
             </div>
           </div>
           <div className="userContent">
@@ -63,18 +63,13 @@ export function ProfilePage() {
               -
             </div>
           </div>
-          <div style={{ marginTop: "1rem" }}>
-            <span>Hope to see you soon. </span>
-            <Link to="/signup" style={{ textDecoration: "none" }}>
-              <span className="text_bold">Take Care !!</span>
-            </Link>
-          </div>
+         
           <button
             onClick={signOutHandler}
             className="add-to-chart-btn "
             style={{ fontWeight: "bold", marginTop: "1rem" }}
           >
-            SIGN OUT
+            UPDATE
           </button>
         </form>
       </div>
