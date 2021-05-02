@@ -1,0 +1,35 @@
+.addressScreen {
+    max-width: 400px;
+    padding: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+    background-color: white;
+    margin-top: 2rem;
+  }
+  .addressScreen > form > input {
+    outline-width: 0;
+    height: 40px;
+    margin-bottom: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    width: 90%;
+    color: black;
+    border: 1px solid #b6b6b6;
+    border: 1px solid blue;
+  }
+  @media only screen and (max-width: 600px) {
+    .addressScreen {
+      /* width: 100%; */
+      padding: 30px;
+      /* margin-left: 1rem; */
+      /* margin-right: -2rem; */
+      box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+      background-color: white;
+    }
+    .userContent {
+      font-size: 17px;
+    }
+  }
+  

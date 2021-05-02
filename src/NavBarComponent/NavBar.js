@@ -1,6 +1,8 @@
 import { useCart } from "../cartContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+
+import { DropDown } from "../DropDownComp/DropDown";
 import { useAuth } from "../authContext";
 
 export function NavBar() {
@@ -27,23 +29,14 @@ export function NavBar() {
       </div>
 
       <div className="nav_right_icons">
-      <div style={{ marginRight: "1rem" }}>
-          <Link to="/products">
-            <span
-              class="iconify shopflix_icon"
-              data-icon="map:clothing-store"
-              data-inline="false"
-            ></span>
-          </Link>
-        </div>
-      <div style={{ marginRight: "1rem" }}>
-          <Link to="/login">
-            <span
-              class="iconify shopflix_icon"
-              data-icon="mdi:account-circle-outline"
-              data-inline="false"
-            ></span>
-          </Link>
+        <div style={{ marginRight: "1rem" }} className="dropdown">
+          <span
+            class="iconify shopflix_icon"
+            data-icon="mdi:account-circle-outline"
+            data-inline="false"
+          ></span>
+          
+          <DropDown />
         </div>
         <div className="wish_icon_right">
           <Link to="/wishlist">

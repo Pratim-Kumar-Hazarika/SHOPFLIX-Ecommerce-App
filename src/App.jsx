@@ -15,6 +15,7 @@ import { Login } from "./LoginPage/Login";
 import { SignUp } from "./SignUp";
 import { PrivateRoute } from "./LoginPage/PrivateRoute";
 import { useAuth } from "./authContext";
+import { AddressPage } from "./LoginPage/AddressPage";
 export default function App() {
   const { dispatch, toastId } = useCart();
   const { login, signOutHandler } = useAuth();
@@ -63,6 +64,7 @@ export default function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <PrivateRoute path="/address" element={<AddressPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <PrivateRoute path="/wishlist" element={<WishList />} />
