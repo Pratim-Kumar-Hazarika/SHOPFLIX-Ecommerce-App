@@ -1,5 +1,3 @@
-import axios from "axios";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../authContext";
 import "./Login.css";
