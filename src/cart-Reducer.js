@@ -99,6 +99,24 @@ export function reducer(state, action) {
         ...state,
         showfastDelivery: !state.showfastDelivery
       };
+      case "INCREMENT_QUANTITY":
+        return {
+          ...state,
+          cart: state.cart.map((item) =>
+            item._id === action.payload
+              ? { ...item, qty: item.qty + 1 }
+              : item
+          )
+        };
+        case "DECREMENT_QUANTITY":
+          return {
+            ...state,
+            cart: state.cart.map((item) =>
+              item._id === action.payload
+                ? { ...item, qty: item.qty - 1 }
+                : item
+            )
+          };
     default:
       return state;
   }

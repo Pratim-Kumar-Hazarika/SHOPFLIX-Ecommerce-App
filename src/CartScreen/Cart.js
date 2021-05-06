@@ -60,7 +60,7 @@ export function Cart() {
       )}
       <div className="cart_div">
         {cart.map((item) => {
-          const { name, image, price, description, _id } = item;
+          const { name, image, price, description, _id,qty } = item;
           return (
             <>
               <div key={_id} className=" horizontalcard">
@@ -75,15 +75,19 @@ export function Cart() {
                     </div>
                     <div className="total_price">₹{price}</div>
                     <div style={{ marginTop: "1rem" }}>
-                      <button className="add-to-chart-btn incBtn">
+                      <button className="add-to-chart-btn incBtn"   onClick={() =>
+                        dispatch({ type: "DECREMENT_QUANTITY", payload: _id })
+                      }>
                         <span
                           class="iconify"
                           data-icon="mdi:minus"
                           data-inline="false"
                         ></span>
                       </button>
-                      44
-                      <button className="add-to-chart-btn incBtn">
+                      {qty}
+                      <button  onClick={() =>
+                        dispatch({ type: "INCREMENT_QUANTITY", payload: _id })
+                      } className="add-to-chart-btn incBtn">
                         <span
                           class="iconify "
                           data-icon="mdi:plus"
