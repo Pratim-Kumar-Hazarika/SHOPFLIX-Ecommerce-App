@@ -47,7 +47,7 @@
     position: relative;
     display: flex;
     padding: 1rem;
-    box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+    box-shadow: 0 0 4px rgb(0 0 0 / 20%);
     margin-bottom: 1rem;
     background-color: white;
   }
@@ -60,10 +60,12 @@
   }
   .checkout {
     overflow: hidden;
-    width: 90%;
-    background-color: #f3f4f6;
+    width: 88%;
+    background-color: white;
     margin: 0;
     margin-top: 1rem;
+    box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+    padding:1.5rem
   }
   .horizontalcard {
     padding: 0.5rem;
@@ -73,7 +75,7 @@
     display: flex;
     overflow: hidden;
     padding: 1rem;
-    box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+    box-shadow: 0 0 4px rgb(0 0 0 / 20%);
     margin-bottom: 1rem;
     margin-left: 0rem;
     background-color: white;
@@ -86,21 +88,23 @@
     width: 90%;
   }
   .checkout {
+    padding: 2rem;
     overflow: hidden;
-    width: 100%;
-    background-color: #f3f4f6;
+    width: 85%;
+    background-color: white;
     margin: 0;
     margin-top: 1rem;
-  }
+    box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+}
   .horizontalcard {
     padding: 0.5rem;
-    max-width: 100%;
+    max-width: 93%;
     color: black;
     position: relative;
     display: flex;
     overflow: hidden;
     padding: 1rem;
-    box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+    box-shadow: 0 0 4px rgb(0 0 0 / 20%);
     margin-bottom: 1rem;
     margin-left: 0rem;
     background-color: white;

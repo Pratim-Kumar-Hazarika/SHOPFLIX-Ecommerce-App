@@ -1,7 +1,7 @@
 import { useCart } from "../cartContext";
 import "./LeftBar.css";
 export function LeftBar() {
-  const { show, dispatch, sortBy, showfastDelivery } = useCart();
+  const { show, dispatch, sortBy, showfastDelivery ,showProducts } = useCart();
 
   return (
     <>
@@ -42,7 +42,9 @@ export function LeftBar() {
             <div style={{ fontWeight: "800" }}>AVAILABLE</div>
             <div>
               <label className="label">
-                <input type="checkbox" />
+                <input type="checkbox" checked={showProducts}
+                onChange={()=>dispatch({type:"FILTER_STOCK"})}
+                />
                 Include out of stock
               </label>
             </div>

@@ -95,11 +95,7 @@ export function Cart() {
                           onClick={() => removeFromCartHandler(item)}
                         >
                           REMOVE FROM CART
-                          <span
-                            class="iconify cartIcon removeIcon"
-                            data-icon="ic:round-remove-shopping-cart"
-                            data-inline="false"
-                          ></span>
+                         
                         </button>
                       </div>
                     </div>

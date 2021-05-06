@@ -12,9 +12,9 @@ export function Products() {
   const { login } = useAuth();
   const navigate = useNavigate();
   const userrrrr = JSON.parse(localStorage.getItem("user"));
-  const { data, sortBy, dispatch, showfastDelivery ,cart} = useCart();
+  const { data, sortBy, dispatch, showfastDelivery ,cart,showProducts} = useCart();
   const sortedData = getSortedData(data, sortBy);
-  const filteredData = filterData(sortedData, showfastDelivery);
+  const filteredData = filterData(sortedData, {showfastDelivery,showProducts});
   function getSortedData(data, sortBy) {
     if (sortBy && sortBy === "HIGH_TO_LOW") {
       return data.sort((a, b) => b.price - a.price);
@@ -24,10 +24,11 @@ export function Products() {
     }
     return data;
   }
-  function filterData(data, showfastDelivery) {
+  function filterData(data, {showfastDelivery,showProducts}) {
     return data.filter(({ fastDelivery }) =>
       showfastDelivery ? fastDelivery : true
-    );
+    )
+    .filter(({inStock})=>showProducts ?true :inStock)
   }
 
   async function addToCartClickHandler(item) {

@@ -7,7 +7,8 @@ export const productsData = {
   wishList: [],
   cart: [],
   toastId: false,
-  showfastDelivery: null
+  showfastDelivery: null,
+  showProducts: true
 };
 
 export function reducer(state, action) {
@@ -117,6 +118,11 @@ export function reducer(state, action) {
                 : item
             )
           };
+        case "FILTER_STOCK":
+          return{
+            ...state,
+            showProducts:!state.showProducts
+          }
     default:
       return state;
   }
