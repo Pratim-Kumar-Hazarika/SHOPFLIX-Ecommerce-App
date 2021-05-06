@@ -43,7 +43,7 @@ export function Login() {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 type="text"
-                placeholder="Enter Email"
+                placeholder="Enter Name"
               />
               <input
                 value={inputPass}
