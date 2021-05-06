@@ -26,7 +26,7 @@ export function Cart() {
     }
   }
   function price() {
-    return cart.reduce((acc, val) => acc + val.price * 1, 0);
+    return cart.reduce((acc, val) => acc + val.price * val.qty, 0);
   }
   return (
     <div className="main_products">
@@ -75,25 +75,20 @@ export function Cart() {
                     </div>
                     <div className="total_price">₹{price}</div>
                     <div style={{ marginTop: "1rem" }}>
-                      <button className="add-to-chart-btn incBtn"   onClick={() =>
+                      <div style={{display:"flex",justifyContent:"space-around"}}>
+                      <button disabled={qty==1} className="add-to-chart-btn incBtn"   onClick={() =>
                         dispatch({ type: "DECREMENT_QUANTITY", payload: _id })
                       }>
-                        <span
-                          class="iconify"
-                          data-icon="mdi:minus"
-                          data-inline="false"
-                        ></span>
+                        <span class="iconify" data-icon="mdi:minus" data-inline="false"></span>
                       </button>
-                      {qty}
+                      <h3>{qty}</h3>
                       <button  onClick={() =>
                         dispatch({ type: "INCREMENT_QUANTITY", payload: _id })
                       } className="add-to-chart-btn incBtn">
-                        <span
-                          class="iconify "
-                          data-icon="mdi:plus"
-                          data-inline="false"
-                        ></span>
+                        <span class="iconify" data-icon="mdi:plus-thick" data-inline="false"></span>
                       </button>
+                      </div>
+                     
                       <div style={{ marginTop: "1rem" }}>
                         <button
                           className="add-to-chart-btn"
