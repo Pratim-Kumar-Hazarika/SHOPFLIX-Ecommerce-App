@@ -174,3 +174,35 @@ ul > li {
   width: 98%;
   background-image: url("https://www.levi.com/wp-content/uploads/2019/07/19_H2_Levis_Blog_Logo_Img_HED.jpg");
 }
+@media only screen and (max-width: 600px) {
+  .section_div {
+    display: flex;
+    flex-direction: column;
+  }
+  .vertical_section {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 100%;
+  }
+  .banner_div {
+    width: 100%;
+  }
+  .horizontal_div2_2 {
+    width: 197%;
+    right: 2rem;
+  }
+
+  .hz_div_two {
+    width: 100%;
+    margin-left: 4rem;
+  }
+  .hz_div_two_md {
+    width: 91%;
+    left: 0.4rem;
+  }
+  .sec_two_horizontal,
+  .sec_two_horizontal2 {
+    right: 2rem;
+  }
+}
