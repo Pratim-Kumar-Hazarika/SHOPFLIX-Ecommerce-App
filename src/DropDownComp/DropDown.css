@@ -1,26 +1,28 @@
 .dropdown:hover .dropScreen {
-    display: block;
-  }
-  
-  .dropScreen {
-    position: absolute;
-    display: none;
-    box-shadow: 0 0 4px rgb(0 0 0 / 20%);
-    background-color: white;
-    padding: 10px;
-    width: 200px;
-    margin-left: -5rem;
-    /* margin-top: 0.5rem; */
-  }
-  .logoutBtn {
-    font-size: 10px;
-  }
-  .link {
-    text-decoration: none;
-    color: black;
-  }
-  .link:hover {
-    text-decoration: underline;
-    text-decoration-color: #ff3f6c;
-  }
-  
+  display: block;
+}
+
+.dropScreen {
+  position: absolute;
+  display: none;
+  box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+  background-color: white;
+  padding: 30px 20px 25px 30px;
+  width: 200px;
+  right: 4rem;
+  border-radius: 10px;
+}
+.logoutBtn {
+  font-size: 10px;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.link:hover {
+  color: #ff3f6c;
+  font-weight: bold;
+  font-size: 19px;
+  transition: ease-in 0.3s;
+  transform: translateY(0);
+}

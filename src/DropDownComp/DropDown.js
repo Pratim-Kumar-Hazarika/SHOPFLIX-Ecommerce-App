@@ -20,6 +20,11 @@ export function DropDown() {
           </span>
         </div>
         <div className="userContent ">
+          <Link to="/" className="link">
+            <span>Home</span>
+          </Link>
+        </div>
+        <div className="userContent ">
           <Link to="/products" className="link">
             <span>Products</span>
           </Link>
