@@ -1,7 +1,6 @@
 .banner_div {
   position: relative;
   overflow: hidden;
-
   width: 80%;
   margin: auto;
   margin-top: 0.5rem;
@@ -44,4 +43,134 @@ ul > li {
   .banner-image {
     width: 100%;
   }
+}
+.vertical_section {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+
+  width: 50%;
+}
+.horizontal_div {
+  height: 40%;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-image: url("https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/men_s03/february_2021/3063j/3063J-3x2-mens-graphic-tees.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]");
+}
+.horizontal_div2 {
+  height: 50%;
+  margin-top: 1rem;
+  background-color: #ff3f6c;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s03/march_2021/4093l/4093L-3x2-online-deal-kids-spring-styles.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
+}
+.text_div {
+  margin-top: 5rem;
+}
+.txt {
+  font-weight: bold;
+  font-size: 30px;
+}
+.txt2 {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.text_div_bg {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.section_div {
+  display: flex;
+
+  margin: 10px;
+}
+
+.vertical_section2 {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 50%;
+}
+.horizontal_div2_2 {
+  height: 94%;
+  margin-left: 2rem;
+  background-color: #ff3f6c;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s03/march_2021/4093k/4093K-3x2-online-deal-baby-spring-sets.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
+}
+.text_div_bg_2 {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.txt2_2 {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.section_two_div {
+  margin-left: -2rem;
+  width: 100%;
+}
+.section_two_horizontal {
+  margin-left: 2rem;
+  width: 50%;
+}
+.hz_div_two {
+  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/divided_s03/april_2021/5103e/5103E-3x2-printed-tees.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
+}
+.sec_two_horizontal {
+  background-image: url("https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/kids_s03/april_2021/4123k/4123k-3x2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]");
+}
+.sec_two_horizontal2 {
+  background-image: url("http://files.hm.com/share/ffc/23j-take-care-rn9tse2z8pgieqdx/resources/assets/images/Statement_plagg.jpg");
+}
+.shopNowBtn {
+  border: none;
+  margin-bottom: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+}
+.txt2 {
+  margin-top: 5rem;
+}
+.text_div_bg22 {
+  margin-top: 5rem;
+}
+.hz_div_two_md {
+  width: 98%;
+  background-image: url("https://www.levi.com/wp-content/uploads/2019/07/19_H2_Levis_Blog_Logo_Img_HED.jpg");
 }

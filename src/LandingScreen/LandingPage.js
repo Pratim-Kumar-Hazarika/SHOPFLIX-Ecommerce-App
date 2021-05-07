@@ -1,33 +1,97 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 export function LandingPage() {
+  const navigate = useNavigate();
+  function buttonhandler() {
+    navigate("/products");
+  }
   return (
     <div className="banner_div">
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ul>
-          <li>Mennn</li>
-          <li>Women</li>
-          <li>Kids</li>
-          <li>Sale</li>
-        </ul>
+      <div className="section_div">
+        <section className="vertical_section">
+          <div className="horizontal_div">
+            <div className="text_div">
+              <span className="txt">Get upto 50% off</span>
+            </div>
+          </div>
+          <div className="horizontal_div2">
+            <div className="text_div_bg">
+              <span className="txt2">Sale on kids collection</span>
+            </div>
+          </div>
+        </section>
+        <section className="vertical_section2">
+          <div className="horizontal_div2_2">
+            <div className="text_div_bg_2">
+              <h1 className="txt2_2">Graphic Tees From Rs799</h1>
+              <div>
+                <h3 className="txt2_2">Best in Comfort</h3>
+              </div>
+              <div>
+                <button onClick={buttonhandler} className="shopNowBtn">
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <img
-        className="banner-image"
-        src="https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s03/march_2021/4093l/4093L-3x2-online-deal-kids-spring-styles.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"
-        alt="banner"
-      />
-      <img
-        className="banner-image"
-        src="https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s03/march_2021/4093k/4093K-3x2-online-deal-baby-spring-sets.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"
-        alt="banner"
-      />
 
-      <div className="shop-btn">
-        <Link to="/products">
-          <button className="add-to-chart-btn move-to-bag-btn btn-lg">
-            SHOP NOW
-          </button>
-        </Link>
+      <section
+        className="vertical_section2 section_two_div"
+        style={{ width: "100%" }}
+      >
+        <div
+          className="horizontal_div2_2 hz_div_two_md"
+          style={{ marginLeft: "2.7rem" }}
+        >
+          <div className="text_div_bg_2">
+            <h1 className="txt2_2">Most Trending in the hood</h1>
+            <div>
+              <h3 className="txt2_2">Only Rs1299</h3>
+            </div>
+            <div>
+              <button onClick={buttonhandler} className="shopNowBtn">
+                SHOP NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="section_div">
+        <section className="vertical_section2 section_two_div">
+          <div className="horizontal_div2_2 hz_div_two">
+            <div className="text_div_bg_2">
+              <h1 className="txt2_2">Trend Forcast Printed Tees</h1>
+              <div>
+                <h3 className="txt2_2">Only Rs799</h3>
+              </div>
+              <div>
+                <button onClick={buttonhandler} className="shopNowBtn">
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="vertical_section section_two_horizontal">
+          <div className="horizontal_div sec_two_horizontal ">
+            <div className="text_div">
+              <h3 className="txt" style={{ fontWeight: "light" }}>
+                For New Born Kids
+              </h3>
+            </div>
+          </div>
+          <div className="horizontal_div2 sec_two_horizontal2">
+            <div className="text_div_bg22">
+              <span className="txt2" style={{ marginBottom: "3rem" }}>
+                BFF Collections
+              </span>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
