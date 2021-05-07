@@ -146,15 +146,7 @@ ul > li {
   margin-left: 2rem;
   width: 50%;
 }
-.hz_div_two {
-  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/divided_s03/april_2021/5103e/5103E-3x2-printed-tees.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
-}
-.sec_two_horizontal {
-  background-image: url("https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/kids_s03/april_2021/4123k/4123k-3x2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]");
-}
-.sec_two_horizontal2 {
-  background-image: url("http://files.hm.com/share/ffc/23j-take-care-rn9tse2z8pgieqdx/resources/assets/images/Statement_plagg.jpg");
-}
+
 .shopNowBtn {
   border: none;
   margin-bottom: 1rem;
@@ -173,4 +165,13 @@ ul > li {
 .hz_div_two_md {
   width: 98%;
   background-image: url("https://www.levi.com/wp-content/uploads/2019/07/19_H2_Levis_Blog_Logo_Img_HED.jpg");
+}
+.hz_div_two {
+  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/divided_s03/april_2021/5103e/5103E-3x2-printed-tees.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
+}
+.sec_two_horizontal {
+  background-image: url("https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/kids_s03/april_2021/4123k/4123k-3x2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]");
+}
+.sec_two_horizontal2 {
+  background-image: url("http://files.hm.com/share/ffc/23j-take-care-rn9tse2z8pgieqdx/resources/assets/images/Statement_plagg.jpg");
 }
