@@ -1,13 +1,12 @@
 import { useCart } from "../cartContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-
-import { DropDown } from "../DropDownComp/DropDown";
 import { useAuth } from "../authContext";
+import { DropDown } from "../DropDownComp/DropDown";
 
 export function NavBar() {
   const { show, setShow, cart, wishList } = useCart();
-  const { login } = useAuth()
+  const { login } = useAuth();
   return (
     <div className="nav_div">
       <div className="icon_name">
@@ -18,11 +17,11 @@ export function NavBar() {
             data-inline="false"
           ></span>
         </button>
-        <h1>ShopFlix</h1>
+        <h1 style={{ fontWeight: "bold" }}>SHOPFLIX</h1>
         <Link to="/">
           <span
             class="iconify shopflix_icon"
-            data-icon="ic:round-shopping-cart"
+            data-icon="emojione-v1:shopping-bags"
             data-inline="false"
           ></span>
         </Link>
@@ -30,36 +29,43 @@ export function NavBar() {
 
       <div className="nav_right_icons">
         <div style={{ marginRight: "1rem" }} className="dropdown">
-          <span
-            class="iconify shopflix_icon"
-            data-icon="mdi:account-circle-outline"
-            data-inline="false"
-          ></span>
-          
+          <div style={{ marginLeft: "5px" }}>
+            <span
+              class="iconify shopflix_icon user"
+              data-icon="clarity:user-line"
+              data-inline="false"
+            ></span>
+          </div>
+          <div className="icon_names">Profile</div>
           <DropDown />
         </div>
         <div className="wish_icon_right">
           <Link to="/wishlist">
-            <span
-              class="iconify shopflix_icon"
-              data-icon="mdi:heart-outline"
-              data-inline="false"
-            ></span>
-            <span className="badge-no">
-            {login && wishList.length}
-            </span>
+            <div style={{ marginLeft: "10px" }}>
+              <span
+                class="iconify shopflix_icon"
+                data-icon="clarity:heart-line"
+                data-inline="false"
+              ></span>
+            </div>
           </Link>
+          <div className="icon_names">WishList</div>
+          <span className="badge-no">{login && wishList.length}</span>
         </div>
         <div>
           <div style={{ position: "relative" }}>
             <Link to="/cart">
-              <span
-                class="iconify shopflix_icon"
-                data-icon="mdi:cart-arrow-down"
-                data-inline="false"
-              ></span>
+              <div>
+                <span
+                  class="iconify shopflix_icon"
+                  data-icon="clarity:shopping-cart-line"
+                  data-inline="false"
+                ></span>
+              </div>
             </Link>
-            <span className="badge-no">{login && cart.length}</span>
+            <div className="icon_names">Cart</div>
+
+            <span className="badge-no badge_two">{login && cart.length}</span>
           </div>
         </div>
       </div>

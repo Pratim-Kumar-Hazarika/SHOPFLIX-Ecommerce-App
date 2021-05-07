@@ -1,5 +1,5 @@
 .nav_div {
-  box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
   position: sticky;
   top: 0;
   z-index: 8;
@@ -7,12 +7,12 @@
   /* overflow: hidden; */
   background-color: white;
   display: flex;
-  /* position: relative; */
+  position: relative;
 }
 .shopflix_icon {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #ff3f6c;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 .icon_name {
   display: flex;
@@ -21,24 +21,24 @@
 }
 
 .badge-no {
-  position: absolute;
-  margin-left: -5px;
-  margin-top: 8px;
-  margin-right: 10px;
-  border-radius: 50%;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: #ff3f6c;
-  width: 55%;
-  text-align: center;
-  color: white;
-  /* height: 18px; */
+ position: absolute;
+ top: 0;
+ margin-left: 2rem;
+ margin-top: 0.5rem;
+ background-color:#ff3f6c;
+ color: white;
+ width: 20px;
+ border-radius: 50%;
+ text-align: center;
 }
 .leftBar_button {
   background-color: white;
   border: 0;
   margin-left: -2rem;
   cursor: pointer;
+}
+.badge_two{
+  margin-left: 20px;
 }
 @media only screen and (min-width: 600px) {
   .leftBar_button {
@@ -53,6 +53,9 @@
     position: absolute;
     right: 0;
     margin-right: 3rem;
+    width: 200px;
+
+    justify-content: space-around;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -67,14 +70,14 @@
     display: flex;
     position: absolute;
     right: 0;
-   
-    margin: 0;
-    margin-top: 1rem;
- 
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
-   .leftBar_button {
-    margin-left: -3rem;
-  } 
+  .icon_names {
+    display: none;
+  }
 }
-
+.icon_names {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: -5px;
+}
