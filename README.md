@@ -21,12 +21,12 @@
 
 
 `Product Listing Page`
-![image](https://user-images.githubusercontent.com/75177895/116454784-fc2b3300-a87d-11eb-9896-9cad0bbbd63f.png)
+![image](https://user-images.githubusercontent.com/75177895/117495723-a3e9e480-af93-11eb-9e1e-30d5670f89b3.png)
 
 `Product Details Page`
-![image](https://user-images.githubusercontent.com/75177895/116454836-064d3180-a87e-11eb-91f9-06c40c32344b.png)
+![image](https://user-images.githubusercontent.com/75177895/117495785-b7954b00-af93-11eb-9f33-e2ad76ea1581.png)
 
 `Cart`
-![image](https://user-images.githubusercontent.com/75177895/116454870-0d743f80-a87e-11eb-8b42-d04cb42f6774.png)
+![image](https://user-images.githubusercontent.com/75177895/117495813-c2e87680-af93-11eb-9bba-28f61833c9fd.png)
 
 
