@@ -79,16 +79,13 @@ export function LandingPage() {
         <section className="vertical_section section_two_horizontal">
           <div className="horizontal_div sec_two_horizontal ">
             <div className="text_div">
-              <h3 className="txt" style={{ fontWeight: "light" }}>
-                For New Born Kids
-              </h3>
+              <span style={{fontSize:"1.5rem"}}>Best in comfort</span>
             </div>
           </div>
           <div className="horizontal_div2 sec_two_horizontal2">
             <div className="text_div_bg22">
-              <span className="txt2" style={{ marginBottom: "3rem" }}>
-                BFF Collections
-              </span>
+            <span style={{fontSize:"2rem",color:"white"}}>BFF Collections</span>
+             
             </div>
           </div>
         </section>

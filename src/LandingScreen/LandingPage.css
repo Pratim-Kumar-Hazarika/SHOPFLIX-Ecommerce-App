@@ -61,7 +61,7 @@ ul > li {
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  background-image: url("https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/men_s03/february_2021/3063j/3063J-3x2-mens-graphic-tees.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]");
+  background-image: url("https://www2.hm.com/content/dam/men_s03/february_2021/3063j/3063J-3x2-mens-graphic-tees.jpg");
 }
 .horizontal_div2 {
   height: 50%;
@@ -74,7 +74,7 @@ ul > li {
   background-position: 0px 0px;
   background-repeat: no-repeat;
   overflow: hidden;
-  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s03/march_2021/4093l/4093L-3x2-online-deal-kids-spring-styles.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
+  background-image: url("https://www2.hm.com/content/dam/kids_s03/march_2021/4093l/4093L-3x2-online-deal-kids-spring-styles.jpg");
 }
 .text_div {
   margin-top: 5rem;
@@ -121,7 +121,7 @@ ul > li {
   background-position: 0px 0px;
   background-repeat: no-repeat;
   overflow: hidden;
-  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/kids_s03/march_2021/4093k/4093K-3x2-online-deal-baby-spring-sets.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
+  background-image: url("https://www2.hm.com/content/dam/kids_s03/march_2021/4093k/4093K-3x2-online-deal-baby-spring-sets.jpg");
 }
 .text_div_bg_2 {
   background: linear-gradient(
@@ -146,7 +146,15 @@ ul > li {
   margin-left: 2rem;
   width: 50%;
 }
-
+.hz_div_two {
+  background-image: url("https://i.cbc.ca/1.4764151.1532701073!/fileImage/httpImage/graphic-tshirts.jpg");
+}
+.sec_two_horizontal {
+  background-image: url("https://coolmaterial.com/wp-content/uploads/2020/07/Levis-502-Jeans-1000x600.jpg");
+}
+.sec_two_horizontal2 {
+  background-image: url("http://files.hm.com/share/ffc/23j-take-care-rn9tse2z8pgieqdx/resources/assets/images/Statement_plagg.jpg");
+}
 .shopNowBtn {
   border: none;
   margin-bottom: 1rem;
@@ -165,13 +173,4 @@ ul > li {
 .hz_div_two_md {
   width: 98%;
   background-image: url("https://www.levi.com/wp-content/uploads/2019/07/19_H2_Levis_Blog_Logo_Img_HED.jpg");
-}
-.hz_div_two {
-  background-image: url("https://lp2.hm.com/hmgoepprod?set=width[1920],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/divided_s03/april_2021/5103e/5103E-3x2-printed-tees.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]");
-}
-.sec_two_horizontal {
-  background-image: url("https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/kids_s03/april_2021/4123k/4123k-3x2.jpg]&scale=size[1200]&sink=format[jpeg],quality[80]");
-}
-.sec_two_horizontal2 {
-  background-image: url("http://files.hm.com/share/ffc/23j-take-care-rn9tse2z8pgieqdx/resources/assets/images/Statement_plagg.jpg");
 }
