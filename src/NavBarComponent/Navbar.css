@@ -1,13 +1,14 @@
 .nav_div {
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
-  position: sticky;
+  
   top: 0;
   z-index: 8;
   height: 9vh;
   /* overflow: hidden; */
   background-color: white;
   display: flex;
-  position: relative;
+  /* position: relative; */
+  position: sticky;
 }
 .shopflix_icon {
   font-size: 1.7rem;
