@@ -15,7 +15,10 @@
 
 
 `Landing Page`
-![image](https://user-images.githubusercontent.com/75177895/116454704-e6b60900-a87d-11eb-9d75-d6cd6fa5f523.png)
+![image](https://user-images.githubusercontent.com/75177895/117492944-ef9a8f00-af8f-11eb-85b1-3ea482ae4ac0.png)
+
+![image](https://user-images.githubusercontent.com/75177895/117492988-fe814180-af8f-11eb-83db-84a70b662e8b.png)
+
 
 `Product Listing Page`
 ![image](https://user-images.githubusercontent.com/75177895/116454784-fc2b3300-a87d-11eb-9896-9cad0bbbd63f.png)
