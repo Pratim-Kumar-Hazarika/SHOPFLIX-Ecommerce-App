@@ -8,7 +8,8 @@ import { useEffect } from "react";
 
 export function Cart() {
   const { cart, dispatch } = useCart();
-  const userrrrr = JSON.parse(localStorage.getItem("user"));
+  const userId = JSON.parse(localStorage.getItem("user"));
+  console.log("the cart is",cart)
 
   async function removeFromCartHandler(item) {
     try {
@@ -17,7 +18,7 @@ export function Cart() {
         payload: item._id
       });
       const res = await axios.delete(
-        `https://Ecommerce-Backend.prratim.repl.co/users/${userrrrr[0]._id}/cart`,
+        `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/cart`,
         { data: { _id: item._id } }
       );
       console.log("deleted", res);
