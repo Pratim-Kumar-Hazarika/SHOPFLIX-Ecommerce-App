@@ -9,23 +9,15 @@ export function NavBar() {
   const { login } = useAuth();
   return (
     <div className="nav_div">
-      <div className="icon_name">
-        <button className="leftBar_button" onClick={() => setShow(!show)}>
-          <span
-            class="iconify shopflix_icon"
-            data-icon="mdi:arrow-right-bold"
-            data-inline="false"
-          ></span>
-        </button>
-        <h1 style={{ fontWeight: "bold" }}>SHOPFLIX</h1>
-        <Link to="/">
-          <span
-            class="iconify shopflix_icon"
-            data-icon="emojione-v1:shopping-bags"
-            data-inline="false"
-          ></span>
-        </Link>
-      </div>
+    <div className="shopflix_logo_name">
+      <span style={{ fontWeight: "bold" }}>SHOPFLIX</span>
+      <span
+        class="iconify brand_logo"
+        data-icon="fa:shopping-bag"
+        data-inline="false"
+      ></span>
+
+    </div>
 
       <div className="nav_right_icons">
         <div style={{ marginRight: "1rem" }} className="dropdown">

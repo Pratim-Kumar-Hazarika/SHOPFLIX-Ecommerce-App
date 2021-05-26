@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { CART_API, WISHLIST_API } from "../api.js";
 import { useAuth } from "../authContext";
+import { BottomNav } from "../BottomNav";
 
 export function Products() {
   const { login } = useAuth();
@@ -124,6 +125,7 @@ export function Products() {
     }
   }
   return (
+    <>
     <div style={{ display: "flex" }}>
       <LeftBar />
 
@@ -135,10 +137,33 @@ export function Products() {
               <div key={item._id} className="cart">
                 <div className="typesof-card-content ">
                   <Link to={`/products/${_id}`}>
-                    <img className="img-size" src={image} alt="productimg" />
+                  <img
+                        className="img-size"
+                        src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fa2%2F43%2Fa24350d6127861cfdf607e09721e21b4adfc57dd.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
+                        alt="productimg"
+                      />
                   </Link>
-                  <h2>{name.slice(0, 15)}</h2>
-                  <p>{description.slice(0, 30) + "...."}</p>
+                  <div className="wish_head">
+                      <div>
+                        <h2>{name.slice(0, 15)}</h2>
+                      </div>
+                      <div>
+                        <button
+                          className="wishClick_btn"
+                          onClick={() => addToWishListHandler(item)}
+                        >
+                          <span
+                            class="iconify wishIcon"
+                            data-icon="clarity:heart-line"
+                            data-inline="false"
+                          ></span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <span style={{ fontSize: "0.9rem" }}>
+                      Men Analouge Watch
+                    </span>
                   <div>
                     <span style={{ fontWeight: "bold", fontSize: "18px" }}>
                       ₹{price}{" "}
@@ -166,16 +191,7 @@ export function Products() {
                       {btnIcon(item)}
                     </div>
                   </button>
-                  <button
-                    className="wish-btn"
-                    onClick={() => addToWishListHandler(item)}
-                  >
-                    <span
-                      class="iconify iconifyicon"
-                      data-icon="mdi:heart"
-                      data-inline="false"
-                    ></span>
-                  </button>
+            
                 </div>
               </div>
             </>
@@ -184,5 +200,9 @@ export function Products() {
         {/* <button onClick={notify}>Notify!</button> */}
       </div>
     </div>
+    <div>
+        <BottomNav />
+      </div>
+    </>
   );
 }

@@ -3,7 +3,7 @@
   
   top: 0;
   z-index: 8;
-  height: 9vh;
+  height: 6.7vh;
   /* overflow: hidden; */
   background-color: white;
   display: flex;
@@ -81,4 +81,16 @@
   font-weight: bold;
   font-size: 13px;
   margin-top: -5px;
+}
+.logo_shopflix {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.shopflix_logo_name {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+.brand_logo {
+  color: #ff3f6c;
 }

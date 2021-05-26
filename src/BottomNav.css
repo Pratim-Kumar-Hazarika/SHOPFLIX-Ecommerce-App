@@ -1,0 +1,41 @@
+.bottom_div {
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+  .seperator {
+    height: 70%;
+    width: 1px;
+    background: #bbbbbb;
+    top: 10px;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+  }
+  .bottom_icon {
+    color: #ff3f6c;
+    font-size: 1.6rem;
+  }
+  .sort_div,
+  .filter_div {
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .filters_sorts {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  @media only screen and (min-width: 800px) {
+    .bottom_div {
+      display: none;
+    }
+  }
+  
