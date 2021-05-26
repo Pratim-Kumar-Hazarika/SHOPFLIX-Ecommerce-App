@@ -5,7 +5,7 @@ export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [
-    { data, sortBy, wishList, cart, toastId, showfastDelivery ,showProducts},
+    { data, sortBy,addresses, wishList, cart, toastId, showfastDelivery ,showProducts},
     dispatch
   ] = useReducer(reducer, productsData);
 
@@ -22,7 +22,8 @@ export function CartProvider({ children }) {
         cart,
         toastId,
         showfastDelivery,
-        showProducts
+        showProducts,
+        addresses
       }}
     >
       {children}

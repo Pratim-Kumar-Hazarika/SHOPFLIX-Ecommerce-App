@@ -16,6 +16,8 @@ import { SignUp } from "./SignUp";
 import { PrivateRoute } from "./LoginPage/PrivateRoute";
 import { useAuth } from "./authContext";
 import { AddressPage } from "./LoginPage/AddressPage";
+import { AddAddress } from "./LoginPage/AddAddress";
+import { AddressEdit } from "./LoginPage/AddressEdit";
 export default function App() {
   const { dispatch, toastId } = useCart();
   const { login, signOutHandler } = useAuth();
@@ -28,7 +30,7 @@ export default function App() {
           "https://Ecommerce-Backend.prratim.repl.co/product"
         );
         dispatch({ type: "DATA_FROM_SERVER", payload: product });
-
+          console.log("products are",product)
         //Get Userss...
         const userId = JSON.parse(localStorage.getItem("user"));
         console.log("the id is mfaaa", userId[0]._id);
@@ -49,21 +51,33 @@ export default function App() {
         } = await axios.get(
           `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/wishlist`
         );
-        console.log("wishhhhhh", wishlist);
         dispatch({ type: "WISH_DATA_FROM_SERVER", payload: wishlist });
+        const {
+          data: {
+            user: { addresses }
+          }
+        } = await axios.get(
+          `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/address`
+        );
+        dispatch({ type: "ADDRESSES_FROM_SERVER", payload: addresses });
+
       } catch (error) {
         console.log("Error Found", error);
       }
+
     }
+    
     console.log("signout handler", signOutHandler);
     return getData();
-  }, [ login]);
+  }, [ login,signOutHandler]);
 
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/addAddress" element={<AddAddress />} />
+        <Route path="/addressEdit/:id" element={<AddressEdit />} />
         <PrivateRoute path="/address" element={<AddressPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

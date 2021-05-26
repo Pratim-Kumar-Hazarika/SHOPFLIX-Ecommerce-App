@@ -8,7 +8,8 @@ export const productsData = {
   cart: [],
   toastId: false,
   showfastDelivery: null,
-  showProducts: true
+  showProducts: true,
+  addresses: []
 };
 
 export function reducer(state, action) {
@@ -29,6 +30,7 @@ export function reducer(state, action) {
         ...state,
         cart: action.payload
       };
+    
     case "ADD_TO_CART":
       if (state.cart.length >= 0) {
         const productInList = state.cart.find(
@@ -122,7 +124,17 @@ export function reducer(state, action) {
           return{
             ...state,
             showProducts:!state.showProducts
-          }
+          };
+          case "ADDRESSES_FROM_SERVER":
+            return {
+              ...state,
+              addresses: action.payload
+            };
+          case "DELETE_ADDRESS":
+            return {
+              ...state,
+              addresses: state.addresses.filter((item) => item._id !== action.payload)
+            };
     default:
       return state;
   }
