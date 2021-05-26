@@ -12,7 +12,7 @@ export function AddressPage() {
   async function addressDeleteClickHandler(item) {
     try {
       const response = await axios.delete(
-        `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/address/update`,
+        `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/address`,
         {
           data: { _id: item }
         }
