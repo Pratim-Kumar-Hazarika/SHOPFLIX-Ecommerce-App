@@ -66,7 +66,7 @@ export function ProfilePage() {
          
           <button
             onClick={signOutHandler}
-            className="add-to-chart-btn "
+            className="signout_btn "
             style={{ fontWeight: "bold", marginTop: "1rem" }}
           >
             UPDATE

@@ -104,26 +104,35 @@ export function ProductDetail() {
     }
   }
   return (
-    <>
+    <div>
+    <div>
       <div className="product-detail-card">
         <div className="image-detail-div">
-          <img className=" product-detail-img" src={image} alt="productimg" />
+          <img
+            className=" product-detail-img"
+            src="https://lp2.hm.com/hmgoepprod?set=source[/e5/3d/e53d6153cb2dcbc8b07813a23001f990af535690.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]"
+            alt="productimg"
+          />
         </div>
         <div className="product_details_div">
           <div className="detail_div_product" style={{ overflow: "hidden" }}>
-            <div className="name_text">{name}</div>
+            <div className="name_text">Adidas Nike</div>
             <div className="description">
-              <span>{description}</span>
+              <span>Men Burgundy Solid Slim Fit Round Neck T-shirt</span>
             </div>
             <div
-              style={{ fontWeight: "bold", fontSize: "10px", color: "#ff3f6c" }}
+              style={{
+                fontWeight: "bold",
+                fontSize: "15px",
+                color: "#ff3f6c"
+              }}
             >
               Special Price
             </div>
             <span className="total_price tt_price">
-              Rs.{price}
+              Rs.1299
               <span className="price-slashed mrp-slashed">RS.2999</span>
-              <span className="discount-text mrp-slashed ">({offer})</span>
+              <span className="discount-text mrp-slashed ">50%</span>
             </span>
             <div>
               <span
@@ -142,6 +151,38 @@ export function ProductDetail() {
                 data-inline="false"
               ></span>
             </div>
+            <div style={{ fontWeight: "bold", marginTop: "1rem" }}>
+              SELECT SIZE
+            </div>
+            <div style={{ display: "flex" }}>
+              <button className="size_btn">S</button>
+              <button className="size_btn">M</button>
+              <button className="size_btn">L</button>
+              <button className="size_btn">XL</button>
+              <button className="size_btn">XXL</button>
+            </div>
+            <div style={{ fontWeight: "bold", marginTop: "1rem" }}>
+              PRODUCT DETAILS
+            </div>
+            <div className="pd_detail">
+              <span>
+                Burgundy solid T-shirt, has a round neck, and short sleeves
+              </span>
+            </div>
+            <div style={{ fontWeight: "bold", marginTop: "1rem" }}>
+              Size & Fit
+            </div>
+            <div className="pd_detail">
+              <span>Slim Fit</span>
+              <div>The model (height 6') is wearing a size M</div>
+            </div>
+            <div style={{ fontWeight: "bold", marginTop: "1rem" }}>
+              Material & Care
+            </div>
+            <div className="pd_detail">
+              <span>100% cotton</span>
+              <div>Machine-wash</div>
+            </div>
             <div className="available_offer">
               Available Offers
               <div className="bank_tags">
@@ -155,8 +196,8 @@ export function ProductDetail() {
                 </div>
 
                 <div className="bank_offer_text">
-                  <span style={{ fontWeight: "bold" }}>Bank Offer 10%</span> Off
-                  on Bank of Baroda Mastercard debit card first time
+                  <span style={{ fontWeight: "bold" }}>Bank Offer 10%</span>{" "}
+                  Off on Bank of Baroda Mastercard debit card first time
                   transaction, Terms and Condition apply
                 </div>
               </div>
@@ -171,8 +212,8 @@ export function ProductDetail() {
                 </div>
 
                 <div className="bank_offer_text">
-                  <span style={{ fontWeight: "bold" }}>Bank Offer 10%</span> Off
-                  on Bank of Baroda Mastercard debit card first time
+                  <span style={{ fontWeight: "bold" }}>Bank Offer 10%</span>{" "}
+                  Off on Bank of Baroda Mastercard debit card first time
                   transaction, Terms and Condition apply
                 </div>
               </div>
@@ -187,37 +228,38 @@ export function ProductDetail() {
                 </div>
 
                 <div className="bank_offer_text">
-                  <span style={{ fontWeight: "bold" }}>Bank Offer 10%</span> Off
-                  on Bank of Baroda Mastercard debit card first time
+                  <span style={{ fontWeight: "bold" }}>Bank Offer 10%</span>{" "}
+                  Off on Bank of Baroda Mastercard debit card first time
                   transaction, Terms and Condition apply
                 </div>
               </div>
             </div>
+          </div>
+          <div className="cart_wish_btn">
+            <button
+              className=" wish_color"
+              onClick={() => addToWishListHandler(productFound)}
+            >
+              <span
+                class="iconify  icon_product_detail"
+                data-icon="mdi:heart"
+                data-inline="false"
+              ></span>
+              WISHLIST
+            </button>
 
-            <div style={{ marginTop: "1rem" }}>
-              <button
-                onClick={() => addToCartClickHandler(productFound)}
-                className="add-to-chart-btn product-detail-addtocart"
-              >
-                {btnText(productFound)}
-                {btnIcon(productFound)}
-              </button>
-              <button
-                className="wish-btn"
-                onClick={() => addToWishListHandler(productFound)}
-              >
-                <span
-                  class="iconify iconifyicon "
-                  data-icon="mdi:heart"
-                  data-inline="false"
-                ></span>
-              </button>
-            </div>
+            <button
+              onClick={() => addToCartClickHandler(productFound)}
+              className=" btn_color"
+            >
+              
+             {btnText(productFound)}
+             {btnIcon(productFound)}
+            </button>
           </div>
         </div>
       </div>
-
-
-    </>
+    </div>
+  </div>
   );
 }

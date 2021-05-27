@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../LoginPage/Address.css";
+import "./AddressEdit.css";
+import "./AddressUpdate.css";
 import axios from "axios";
 import { CountryDropdown } from "react-country-region-selector";
 import { useNavigate, useParams } from "react-router-dom";
@@ -160,7 +161,7 @@ export function AddressEdit() {
 
             <button
               onClick={updateAddressClickHandler}
-              className="add-to-chart-btn "
+              className="add_address_btn "
               style={{ fontWeight: "bold" }}
             >
               SAVE CHANGES

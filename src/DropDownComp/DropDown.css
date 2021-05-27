@@ -13,7 +13,14 @@
   border-radius: 10px;
 }
 .logoutBtn {
-  font-size: 10px;
+  background-color: #ff3f6c;
+  color: white;
+  width: 100%;
+
+  border: 0;
+  border-radius: 7px;
+  font-weight: bold;
+  padding: 1rem;
 }
 .link {
   text-decoration: none;

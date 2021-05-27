@@ -134,75 +134,79 @@ export function Products() {
           const { name, image, price, offer, description, _id } = item;
           return (
             <>
-              <div key={item._id} className="cart">
-                <div className="typesof-card-content ">
-                  <Link to={`/products/${_id}`}>
-                  <img
-                        className="img-size"
-                        src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fa2%2F43%2Fa24350d6127861cfdf607e09721e21b4adfc57dd.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
-                        alt="productimg"
-                      />
-                  </Link>
-                  <div className="wish_head">
-                      <div>
-                        <h2>{name.slice(0, 15)}</h2>
-                      </div>
-                      <div>
-                        <button
-                          className="wishClick_btn"
-                          onClick={() => addToWishListHandler(item)}
-                        >
-                          <span
-                            class="iconify wishIcon"
-                            data-icon="clarity:heart-line"
-                            data-inline="false"
-                          ></span>
-                        </button>
-                      </div>
-                    </div>
-
-                    <span style={{ fontSize: "0.9rem" }}>
-                      Men Analouge Watch
-                    </span>
-                  <div>
-                    <span style={{ fontWeight: "bold", fontSize: "18px" }}>
-                      ₹{price}{" "}
-                    </span>
-                    <span
-                      className="price-slashed "
-                      style={{ fontSize: "13px" }}
-                    >
-                      RS.2999
-                    </span>
-                    <span
-                      className="discount-text  "
-                      style={{ fontSize: "13px" }}
-                    >
-                      ({offer})
-                    </span>
-                  </div>
-
+            {/* className="cart" */}
+            {/* <div key={item._id}> */}
+            <div className="typesof-card-content grow">
+              <Link to={`/products/${_id}`}>
+                <img
+                  className="img-size"
+                  src="https://lp2.hm.com/hmgoepprod?set=source[/e5/3d/e53d6153cb2dcbc8b07813a23001f990af535690.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[w],hmver[2]&call=url[file:/product/main]"
+                  alt="product img"
+                />
+              </Link>
+              <div className="wish_head ">
+                <div>
+                  <h2>{name.slice(0, 15)}</h2>
+                </div>
+                <div>
                   <button
-                    className="add-to-chart-btn"
-                    onClick={() => addToCartClickHandler(item)}
+                    className="wishClick_btn"
+                    onClick={() => addToWishListHandler(item)}
                   >
-                    <div style={{ position: "relative" }}>
-                    {btnText(item)}
-                      {btnIcon(item)}
-                    </div>
+                    <span
+                      class="iconify wishIcon"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
                   </button>
-            
                 </div>
               </div>
-            </>
-          );
-        })}
-        {/* <button onClick={notify}>Notify!</button> */}
-      </div>
+
+              <span className="grow1" style={{ fontSize: "0.9rem" }}>
+                Men Analouge Watch
+              </span>
+              <div>
+                <span style={{ fontWeight: "bold", fontSize: "15px" }}>
+                  ₹{price}{" "}
+                </span>
+                <span
+                  className="price-slashed "
+                  style={{ fontSize: "13px" }}
+                >
+                  RS.2999
+                </span>
+                <span
+                  className="discount-text  "
+                  style={{ fontSize: "13px" }}
+                >
+                  ({offer})
+                </span>
+              </div>
+
+              <button
+                className="add-to-chart-btn btn_hide"
+                onClick={() => addToCartClickHandler(item)}
+              >
+                <div style={{ position: "relative" }}>
+                  ADD TO CART
+                  <span
+                    class="iconify cartIcon"
+                    data-icon="ic:baseline-shopping-cart"
+                    data-inline="false"
+                  ></span>
+                </div>
+              </button>
+            </div>
+            {/* </div> */}
+          </>
+        );
+      })}
+      {/* <button onClick={notify}>Notify!</button> */}
     </div>
-    <div>
-        <BottomNav />
-      </div>
+  </div>
+  <div>
+    <BottomNav />
+  </div>
     </>
   );
 }

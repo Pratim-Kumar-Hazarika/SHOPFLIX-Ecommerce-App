@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../LoginPage//AddressUpdate.css";
+import "./AddressUpdate.css";
 import axios from "axios";
 import { CountryDropdown } from "react-country-region-selector";
 import { useNavigate } from "react-router-dom";
@@ -158,7 +158,7 @@ export function AddAddress() {
 
             <button
               onClick={addAddressClickHandler}
-              className="add-to-chart-btn "
+              className="add_address_btn "
               style={{ fontWeight: "bold" }}
             >
               ADD ADDRESS

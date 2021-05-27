@@ -1,0 +1,53 @@
+.md_div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .addressScreenPage {
+    /* max-width: 400px;
+    padding: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+    background-color: white;
+    margin-top: 2rem;
+    border: 1px solid black; */
+  }
+  .userContent {
+    /* border: 1px solid black; */
+    display: flex;
+    font-size: 20spx;
+    color: #282c3f;
+    margin-top: 1rem;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .add_screenPage {
+      width: 100%;
+      margin-left: 10px;
+      box-shadow: 0 0 4px rgb(0 0 0 / 15%);
+    }
+  }
+  .add_address_btn {
+    background-color: #ff3f6c;
+    color: white;
+    width: 100%;
+  
+    border: 0;
+    border-radius: 7px;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  .plus_iconify {
+    font-size: 13rem;
+    color: gray;
+  }
+  .add_screenPage {
+    width: 100%;
+    margin-left: 10px;
+    box-shadow: 0 0 4px rgb(0 0 0 / 15%);
+    margin-top: 10px;
+    padding: 70px;
+    max-width: 300px;
+  }
+  
