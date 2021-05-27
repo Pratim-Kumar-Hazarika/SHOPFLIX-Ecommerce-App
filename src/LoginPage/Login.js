@@ -64,7 +64,7 @@ export function Login() {
               </div>
               <button
                 onClick={loginClickHandler}
-                className="add-to-chart-btn "
+                className="signout_btn "
                 style={{ fontWeight: "bold", marginTop: "1rem" }}
               >
                 {login ? "Siggned in" : "Sign in"}

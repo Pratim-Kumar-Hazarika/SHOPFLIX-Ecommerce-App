@@ -61,7 +61,7 @@ export function SignUp() {
             </div>
             <button
               onClick={signUpClickHandler}
-              className="add-to-chart-btn "
+              className="signout_btn "
               style={{ fontWeight: "bold" }}
             >
               SIGN UP
