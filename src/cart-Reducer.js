@@ -107,7 +107,7 @@ export function reducer(state, action) {
           ...state,
           cart: state.cart.map((item) =>
             item._id === action.payload
-              ? { ...item, qty: item.qty + 1 }
+              ? { ...item, quantity: item.quantity + 1 }
               : item
           )
         };
@@ -116,7 +116,7 @@ export function reducer(state, action) {
             ...state,
             cart: state.cart.map((item) =>
               item._id === action.payload
-                ? { ...item, qty: item.qty - 1 }
+                ? { ...item, quantity: item.quantity - 1 }
                 : item
             )
           };

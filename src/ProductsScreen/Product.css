@@ -38,12 +38,13 @@
   .btn_hide {
     display: none;
   }
+
 }
 @media only screen and (min-width: 800px) {
   .product-container {
     width: 100%;
     /* margin: auto; */
-    margin-left: 11rem;
+    /* margin-left: 11rem; */
   }
   .cart {
     margin: 0;

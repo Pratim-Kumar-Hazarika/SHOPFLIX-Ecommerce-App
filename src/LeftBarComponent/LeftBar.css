@@ -1,9 +1,6 @@
-.left_nav {
-  width: max-content;
-  position: fixed;
-  height: 100vh;
-
-  background-color: #f9fafb;
+.left_nav{
+  width:100%;
+max-width: 200px;
 }
 .price_div {
   padding: 0.5rem;
@@ -16,5 +13,22 @@
 @media only screen and (max-width: 600px) {
   .left_nav {
     z-index: 1;
+    visibility: visible;
+    /* border: 1px solid black; */
+  
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    margin-top: 10rem;
+    margin-bottom: 3.5rem;
+    width: 100%;
+    max-width: 100%;
   }
+}
+.price_div >div {
+
+  margin-top: 0.5rem;
+}
+.avalaible {
+  margin-top: 0.5rem;
 }

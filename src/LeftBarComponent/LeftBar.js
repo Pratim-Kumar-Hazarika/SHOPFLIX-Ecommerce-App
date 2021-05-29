@@ -39,8 +39,8 @@ export function LeftBar() {
 
         <div className="price_div">
           <div>
-            <div style={{ fontWeight: "800" }}>AVAILABLE</div>
-            <div>
+            <div  style={{ fontWeight: "800" }}>AVAILABLE</div>
+            <div className="avalaible">
               <label className="label">
                 <input type="checkbox" checked={showProducts}
                 onChange={()=>dispatch({type:"FILTER_STOCK"})}
@@ -48,7 +48,7 @@ export function LeftBar() {
                 Include out of stock
               </label>
             </div>
-            <div>
+            <div className="avalaible">
               <label className="label">
                 <input
                   type="checkbox"

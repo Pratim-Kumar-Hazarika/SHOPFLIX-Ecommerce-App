@@ -4,13 +4,13 @@ import { ReactComponent as EmptyTrolly } from "../assets/trolly.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { CART_API } from "../api.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import PulseLoader from "react-spinners/PulseLoader";
 
 export function Cart() {
   const { cart, dispatch } = useCart();
   const userId = JSON.parse(localStorage.getItem("user"));
-  console.log("the cart is",cart)
-
+  const [loading,setLoading]= useState(false)
   async function removeFromCartHandler(item) {
     try {
       dispatch({
@@ -27,8 +27,50 @@ export function Cart() {
     }
   }
   function price() {
-    return cart.reduce((acc, val) => acc + val.price * val.qty, 0);
+    return cart.reduce((acc, val) => acc + val.product.price * val.quantity, 0);
   }
+
+  async function incrementClickHandler(item){
+    setLoading(true)
+    try {
+      const response = await axios.post(
+        `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/quantity/cart`,
+        {
+          cartId: item._id,
+          quantityValue:"increment"
+        }
+      );
+      if(response.status === 200){
+        console.log("The update is sucessfull",response)
+        dispatch({ type: "INCREMENT_QUANTITY", payload: item._id })
+       setLoading(false)
+      }
+    } catch (error) {
+      console.log("Error while updating quantity")
+      setLoading(false)
+    }
+  }
+  async function decrementClickHandler(item){
+    console.log("DECEREMNT")
+    setLoading(true)
+    try {
+      const response = await axios.post(
+        `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/quantity/cart`,
+        {
+          cartId: item._id
+        }
+      );
+      if(response.status === 200){
+        console.log("The decrement update is sucessfull",response)
+        dispatch({ type: "DECREMENT_QUANTITY", payload:item._id })
+        setLoading(false)
+      }
+    } catch (error) {
+      console.log("Error while updating quantity")
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="main_products">
       {cart.length === 0 && (
@@ -61,7 +103,7 @@ export function Cart() {
       )}
       <div className="cart_div">
         {cart.map((item) => {
-          const { name, image, price, description, _id,qty } = item;
+          const { name, image, price, description, _id,qty } = item.product;
           return (
             <>
               <div key={_id} className=" horizontalcard">
@@ -77,22 +119,27 @@ export function Cart() {
                     <div className="total_price">₹{price}</div>
                     <div style={{ marginTop: "1rem" }}>
                       <div style={{display:"flex",justifyContent:"space-around"}}>
-                      <button disabled={qty==1} className="add-to-chart-btn incBtn"   onClick={() =>
-                        dispatch({ type: "DECREMENT_QUANTITY", payload: _id })
-                      }>
+                      <button disabled={item.quantity ===1}  className="add-to-chart-btn incBtn"   onClick={() =>decrementClickHandler(item) }>
                         <span class="iconify" data-icon="mdi:minus" data-inline="false"></span>
                       </button>
-                      <h3>{qty}</h3>
-                      <button  onClick={() =>
-                        dispatch({ type: "INCREMENT_QUANTITY", payload: _id })
-                      } className="add-to-chart-btn incBtn">
+                      <h3> {!loading ? item.quantity:''}  <PulseLoader
+
+                        type="Puff"
+                        color="#FF3F6C"
+                        loading={loading}
+                        height={100}
+                        width={100}
+                        timeout={3000} 
+                        size={11}
+                      /></h3>
+                      <button   onClick={() => incrementClickHandler(item)} className="add-to-chart-btn incBtn ">
                         <span class="iconify" data-icon="mdi:plus-thick" data-inline="false"></span>
                       </button>
                       </div>
                      
                       <div style={{ marginTop: "1rem" }}>
                         <button
-                          className="add-to-chart-btn"
+                          className="add-to-chart-btn logoutBtn"
                           onClick={() => removeFromCartHandler(item)}
                         >
                           REMOVE FROM CART
@@ -139,7 +186,7 @@ export function Cart() {
               <div className="total_price">₹ {price()} </div>
             </div>
 
-            <button className="add-to-chart-btn move-to-bag-btn place-order-btn">
+            <button className="add-to-chart-btn move-to-bag-btn place-order-btn logoutBtn">
               PLACE ORDER
             </button>
           </div>

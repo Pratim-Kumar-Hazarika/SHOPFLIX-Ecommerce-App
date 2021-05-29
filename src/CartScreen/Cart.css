@@ -11,6 +11,11 @@
 }
 .incBtn {
   width: auto;
+  background-color: #ff3f6c;
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  font-weight: bold;
 }
 .place-order-btn {
   background-color: #ff3f6c;

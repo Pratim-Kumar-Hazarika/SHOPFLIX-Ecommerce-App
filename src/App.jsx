@@ -30,10 +30,9 @@ export default function App() {
           "https://Ecommerce-Backend.prratim.repl.co/product"
         );
         dispatch({ type: "DATA_FROM_SERVER", payload: product });
-          console.log("products are",product)
+  
         //Get Userss...
         const userId = JSON.parse(localStorage.getItem("user"));
-        console.log("the id is mfaaa", userId[0]._id);
         const {
           data: {
             user: { cart }
@@ -41,9 +40,10 @@ export default function App() {
         } = await axios.get(
           `https://Ecommerce-Backend.prratim.repl.co/users/${userId[0]._id}/cart`
         );
+        console.log("The cart of the user is...",cart)
         const cartItems = cart.map((item) => item.product);
 
-        dispatch({ type: "CART_DATA_FROM_SERVER", payload: cartItems });
+        dispatch({ type: "CART_DATA_FROM_SERVER", payload: cart });
         const {
           data: {
             user: { wishlist }
